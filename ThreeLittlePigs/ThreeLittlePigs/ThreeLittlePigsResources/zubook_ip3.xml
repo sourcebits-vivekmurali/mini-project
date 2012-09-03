@@ -1,0 +1,539 @@
+<ZuBook prodId="4" 
+        name="Three Little Pigs" 
+        device="iPhone3" 
+        version="1.1" 
+        nextbtn="next.png" 
+        prevbtn="back.png"
+        default_background="start_background_ip3.png">
+  
+<InfoLine lineno="1" text="Application Design, Text and Illustrations:"/>   
+<InfoLine lineno="2" text="Copyright © 2011 Zubadoo Media Limited."/> 
+<InfoLine lineno="3" text="All Rights Reserved."/> 
+<InfoLine lineno="4" text=""/>          
+  
+  <Scene id="START" stepCount="0" stepLength="0" loopStep="0">
+    <Audio fileName="z04_start.m4a"/>
+    <Objects>
+        <Image id="bg" fileName="start_background_ip3.png" x="0" y="0" visible="true"/>
+        
+        <Button id="autoplay" fileName="start_autoplay_ip3.png" x="320" y="180" visible="true" command="AUTOPLAY"/>
+      
+        <Button id="readtome" fileName="start_read_to_me_ip3.png" x="290" y="100" visible="true" command="READTOME"/>
+      
+        <Button id="readmyself" fileName="start_read_by_myself_ip3.png" x="270" y="250" visible="true" command="READMYSELF"/>
+      
+        <Button id="info" fileName="start_info_ip3.png" x="450" y="5" visible="true" command="INFO"/>
+        
+        <Button id="zubadoo" fileName="start_zubadoo_logo_ip3.png" x="0" y="280" visible="true" command="VIEWMORE"/> 
+    </Objects>
+  </Scene>
+  <Scene id="s01" stepCount="50" stepLength="100" loopStep="1">
+    <Audio fileName="z04_scene01.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s01_background_ip3.png" x="0" y="0" visible="true"/>
+      <Image id="clouds" fileName="s01_clouds_ip3.png" x="0" y="0" visible="true"/>
+      <Image id="grass" fileName="s01_grass_ip3.png" x="0" y="128" visible="true"/>
+      <Image id="mud" fileName="s01_mud_ip3.png" x="-20" y="113" visible="true"/>
+      <Image id="pig_01" fileName="s01_pig_01_ip3.png" x="40" y="108" visible="true"/>
+      <Image id="pig_02" fileName="s01_pig_02_ip3.png" x="190" y="62" visible="true"/>
+      <Image id="pig_body" fileName="s01_pig_body_ip3.png" x="358" y="137" visible="true"/>
+      <Image id="trough" fileName="s01_trough_ip3.png" x="235" y="190" visible="true"/>
+      <Image id="head_01" fileName="s01_pig_head_01_ip3.png" x="309" y="80" visible="true"/>
+      <Image id="head_02" fileName="s01_pig_head_02_ip3.png" x="309" y="80" visible="false"/>
+      <Image id="head_03" fileName="s01_pig_head_03_ip3.png" x="309" y="80" visible="false"/>
+      <Image id="text" fileName="s01_text_ip3.png" x="1" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Hide target="head_01" step="10"/>
+      <Show target="head_02" step="10"/>
+      <Hide target="head_02" step="12"/>
+      <Show target="head_03" step="12"/>
+      <Hide target="head_03" step="30"/>
+      <Show target="head_02" step="30"/>
+      <Hide target="head_02" step="32"/>
+      <Show target="head_01" step="32"/>
+    </Actions>
+  </Scene>
+  <Scene id="s02" stepCount="100" stepLength="100" loopStep="">
+    <Audio fileName="z04_scene02.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s02_background_ip3.png" x="0" y="0" visible="true"/>
+      <Image id="mama_pig" fileName="s02_mama_pig_ip3.png" x="230" y="1" visible="true"/>
+      <Cycle id="pig01" x="480" y="90" visible="true" duration="1000" count="" fileName="">
+        <Frame fileName="s02_pig01_01_ip3.png"/>
+        <Frame fileName="s02_pig01_02_ip3.png"/>
+        <Frame fileName="s02_pig01_03_ip3.png"/>
+        <Frame fileName="s02_pig01_02_ip3.png"/>
+      </Cycle>
+      <Cycle id="pig02" x="480" y="90" visible="true" duration="1000" count="" fileName="">
+        <Frame fileName="s02_pig02_01_ip3.png"/>
+        <Frame fileName="s02_pig02_02_ip3.png"/>
+        <Frame fileName="s02_pig02_03_ip3.png"/>
+        <Frame fileName="s02_pig02_02_ip3.png"/>
+      </Cycle>
+      <Cycle id="pig03" x="480" y="90" visible="true" duration="1000" count="" fileName="">
+        <Frame fileName="s02_pig03_01_ip3.png"/>
+        <Frame fileName="s02_pig03_02_ip3.png"/>
+        <Frame fileName="s02_pig03_03_ip3.png"/>
+        <Frame fileName="s02_pig03_02_ip3.png"/>
+      </Cycle>
+      <Image id="text" fileName="s02_text_ip3.png" x="1" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Move target="pig01" step="1" toX="-200" toY="140" duration="6200"/>
+      <Start target="pig02" step="1"/>
+      <Start target="pig03" step="1"/>
+      <Start target="pig01" step="1"/>
+      <Move target="pig02" step="15" toX="-200" toY="140" duration="6200"/>
+      <Move target="pig03" step="30" toX="-200" toY="140" duration="6200"/>
+    </Actions>
+  </Scene>
+  <Scene id="s03" stepCount="100" stepLength="100" loopStep="">
+    <Audio fileName="z04_scene03.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s03_background_ip3.png" x="0" y="0" visible="true"/>
+      <Cycle id="pig" x="480" y="100" visible="true" duration="1000" count="" fileName="">
+        <Frame fileName="s03_pig_01_ip3.png"/>
+        <Frame fileName="s03_pig_02_ip3.png"/>
+        <Frame fileName="s03_pig_03_ip3.png"/>
+        <Frame fileName="s03_pig_02_ip3.png"/>
+      </Cycle>
+      <Image id="straw" fileName="s03_straw_ip3.png" x="0" y="30" visible="true"/>
+      <Image id="text" fileName="s03_text_ip3.png" x="1" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Start target="pig" step="5"/>
+      <Move target="pig" step="5" toX="335" toY="107" duration="4000"/>
+      <Stop target="pig" step="44"/>
+    </Actions>
+  </Scene>
+  <Scene id="s04" stepCount="100" stepLength="100" loopStep="">
+    <Audio fileName="z04_scene04.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s04_background_ip3.png" x="0" y="0" visible="true"/>
+      <Image id="pig" fileName="s04_pig_ip3.png" x="245" y="130" visible="true"/>
+      <Cycle id="arm" x="330" y="215" visible="true" duration="800" count="" fileName="">
+        <Frame fileName="s04_arm_01_ip3.png"/>
+        <Frame fileName="s04_arm_02_ip3.png"/>
+      </Cycle>
+      <Image id="text" fileName="s04_text_ip3.png" x="1" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Start target="arm" step="5"/>
+    </Actions>
+  </Scene>
+  <Scene id="s05" stepCount="100" stepLength="100" loopStep="">
+    <Audio fileName="z04_scene05.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s05_background_ip3.png" x="0" y="0" visible="true"/>
+      <Image id="pig" fileName="s05_pig_ip3.png" x="125" y="35" visible="true"/>
+      <Cycle id="arm" x="205" y="115" visible="true" duration="1200" count="" fileName="">
+        <Frame fileName="s05_arm_01_ip3.png"/>
+        <Frame fileName="s05_arm_02_ip3.png"/>
+        <Frame fileName="s05_arm_03_ip3.png"/>
+        <Frame fileName="s05_arm_02_ip3.png"/>
+      </Cycle>
+      <Image id="house01" fileName="s05_house_01_ip3.png" x="160" y="120" visible="true"/>
+      <Image id="house02" fileName="s05_house_02_ip3.png" x="160" y="120" visible="false"/>
+      <Image id="house03" fileName="s05_house_03_ip3.png" x="160" y="120" visible="false"/>
+      <Image id="text" fileName="s05_text_ip3.png" x="1" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Start target="arm" step="1"/>
+      <Hide target="house01" step="20"/>
+      <Show target="house02" step="20"/>
+      <Hide target="house02" step="40"/>
+      <Show target="house03" step="40"/>
+      <Stop target="arm" step="40"/>
+    </Actions>
+  </Scene>
+ 
+   <Scene id="s06" stepCount="100" stepLength="100" loopStep="">
+    <Audio fileName="z04_scene06.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s06_background_ip3.png" x="0" y="0" visible="true"/>
+      <Cycle id="wolf" x="-150" y="60" visible="true" duration="1200" count="" fileName="">
+        <Frame fileName="s06_wolf_01_ip3.png"/>
+        <Frame fileName="s06_wolf_02_ip3.png"/>
+        <Frame fileName="s06_wolf_03_ip3.png"/>
+        <Frame fileName="s06_wolf_02_ip3.png"/>
+      </Cycle>
+      <Image id="tree02" fileName="s06_tree_02_ip3.png" x="-10" y="-12" visible="true"/>
+      <Image id="text" fileName="s06_text_ip3.png" x="1" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Start target="wolf" step="1"/>
+      <Move target="wolf" step="1" toX="480" toY="150" duration="8000"/>
+    </Actions>
+  </Scene>
+ 
+   <Scene id="s07" stepCount="60" stepLength="100" loopStep="30">
+    <Audio fileName="z04_scene07.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s07_background_ip3.png" x="0" y="0" visible="true"/>
+      <Image id="head01" fileName="s07_pig_head_01_ip3.png" x="300" y="130" visible="true"/>
+      <Image id="head02" fileName="s07_pig_head_02_ip3.png" x="300" y="130" visible="false"/>
+      <Cycle id="wolf" x="-200" y="150" visible="true" duration="1200" count="" fileName="">
+        <Frame fileName="s06_wolf_01_ip3.png"/>
+        <Frame fileName="s06_wolf_02_ip3.png"/>
+        <Frame fileName="s06_wolf_03_ip3.png"/>
+        <Frame fileName="s06_wolf_02_ip3.png"/>
+      </Cycle>
+      <Image id="text" fileName="s07_text_ip3.png" x="1" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Move target="wolf" step="5" toX="15" toY="120" duration="3000"/>
+      <Start target="wolf" step="5"/>
+      <Stop target="wolf" step="38"/>
+      <Hide target="head01" step="30"/>
+      <Show target="head02" step="30"/>
+      <Hide target="head02" step="32"/>
+      <Show target="head01" step="32"/>
+      <Hide target="head01" step="34"/>
+      <Show target="head02" step="34"/>
+      <Hide target="head02" step="36"/>
+      <Show target="head01" step="36"/>
+    </Actions>
+  </Scene>
+  <Scene id="s08" stepCount="100" stepLength="100" loopStep="">
+    <Audio fileName="z04_scene08.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s03_background_ip3.png" x="0" y="0" visible="true"/>
+      <Image id="pig" fileName="s08_pig_ip3.png" x="325" y="142" visible="false"/>
+      <Image id="house01" fileName="s08_straw_house_01_ip3.png" x="256" y="-29" visible="true"/>
+      <Image id="house02" fileName="s08_straw_house_02_ip3.png" x="256" y="-29" visible="false"/>
+      <Image id="house03" fileName="s08_straw_house_03_ip3.png" x="256" y="-29" visible="false"/>
+      <Image id="house04" fileName="s08_straw_house_04_ip3.png" x="256" y="-29" visible="false"/>
+      <Image id="house05" fileName="s08_straw_house_05_ip3.png" x="256" y="-29" visible="false"/>
+      <Image id="house06" fileName="s08_straw_house_06_ip3.png" x="256" y="-29" visible="false"/>
+      <Image id="house07" fileName="s08_straw_house_07_ip3.png" x="256" y="-29" visible="false"/>
+      <Image id="house08" fileName="s08_straw_house_08_ip3.png" x="256" y="-29" visible="false"/>
+      <Image id="house09" fileName="s08_straw_house_09_ip3.png" x="256" y="-29" visible="false"/>
+      <Image id="house10" fileName="s08_straw_house_10_ip3.png" x="256" y="-29" visible="false"/>
+      <Image id="wolf" fileName="s06_wolf_01_ip3.png" x="15" y="120" visible="true"/>
+      <Cycle id="blow" x="148" y="105" visible="false" duration="1000" count="" fileName="">
+        <Frame fileName="s08_blow_01_ip3.png"/>
+        <Frame fileName="s08_blow_02_ip3.png"/>
+      </Cycle>
+      <Image id="text" fileName="s08_text_ip3.png" x="1" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Show target="blow" step="10"/>
+      <Start target="blow" step="10"/>
+      <Hide target="house01" step="20"/>
+      <Show target="house02" step="20"/>
+      <Hide target="house02" step="22"/>
+      <Show target="house03" step="22"/>
+      <Hide target="house03" step="24"/>
+      <Show target="house04" step="24"/>
+      <Hide target="house04" step="26"/>
+      <Show target="house05" step="26"/>
+      <Hide target="house05" step="28"/>
+      <Show target="house06" step="28"/>
+      <Hide target="house06" step="30"/>
+      <Show target="house07" step="30"/>
+      <Hide target="house07" step="32"/>
+      <Show target="house08" step="32"/>
+      <Hide target="house08" step="34"/>
+      <Show target="house09" step="34"/>
+      <Hide target="house09" step="36"/>
+      <Show target="house10" step="36"/>
+      <Hide target="house10" step="38"/>
+      <Show target="pig" step="38"/>
+      <Stop target="blow" step="40"/>
+      <Hide target="blow" step="40"/>
+    </Actions>
+  </Scene>
+  <Scene id="s09" stepCount="100" stepLength="100" loopStep="">
+    <Audio fileName="z04_scene09.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s09_background_ip3.png" x="0" y="0" visible="true"/>
+      <Cycle id="pig" x="-130" y="150" visible="true" duration="1200" count="" fileName="">
+        <Frame fileName="s09_pig_01_ip3.png"/>
+        <Frame fileName="s09_pig_02_ip3.png"/>
+        <Frame fileName="s09_pig_03_ip3.png"/>
+        <Frame fileName="s09_pig_02_ip3.png"/>
+      </Cycle>
+      <Image id="tree01" fileName="s09_tree_01_ip3.png" x="386" y="-44" visible="true"/>
+      <Image id="text" fileName="s09_text_ip3.png" x="1" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Start target="pig" step="1"/>
+      <Move target="pig" step="10" toX="480" toY="107" duration="4000"/>
+    </Actions>
+  </Scene>
+  <Scene id="s10" stepCount="60" stepLength="100" loopStep="30">
+    <Audio fileName="z04_scene07.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s10_background_ip3.png" x="0" y="0" visible="true"/>
+      <Image id="house" fileName="s10_house_ip3.png" x="25" y="35" visible="true"/>
+      <Image id="head01" fileName="s10_pig_head_01_ip3.png" x="175" y="141" visible="true"/>
+      <Image id="head02" fileName="s10_pig_head_02_ip3.png" x="175" y="141" visible="false"/>
+      <Image id="wolf" fileName="s10_wolf_02_ip3.png" x="360" y="100" visible="true"/>
+      <Image id="smoke01" fileName="s10_smoke_01_ip3.png" x="35" y="-20" visible="false"/>
+      <Image id="smoke02" fileName="s10_smoke_02_ip3.png" x="31" y="-27" visible="false"/>
+      <Image id="text" fileName="s10_text_ip3.png" x="1" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Show target="smoke01" step="5"/>
+      <Hide target="smoke01" step="10"/>
+      <Show target="smoke02" step="10"/>
+      <Hide target="smoke02" step="15"/>
+      <Hide target="head01" step="30"/>
+      <Show target="head02" step="30"/>
+      <Show target="head01" step="32"/>
+      <Hide target="head02" step="32"/>
+      <Show target="head02" step="34"/>
+      <Hide target="head01" step="34"/>
+      <Show target="smoke01" step="35"/>
+      <Show target="head01" step="36"/>
+      <Hide target="head02" step="36"/>
+      <Hide target="smoke01" step="40"/>
+      <Show target="smoke02" step="40"/>
+      <Hide target="smoke02" step="45"/>
+    </Actions>
+  </Scene>
+  <Scene id="s11" stepCount="100" stepLength="100" loopStep="">
+    <Audio fileName="z04_scene08.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s10_background_ip3.png" x="0" y="0" visible="true"/>
+      <Image id="pig02" fileName="s11_pig_02_ip3.png" x="66" y="134" visible="false"/>
+      <Image id="pig_body" fileName="s11_pig_body_ip3.png" x="143" y="182" visible="false"/>
+      <Image id="house01" fileName="s11_house_01_ip3.png" x="0" y="-10" visible="true"/>
+      <Image id="house02" fileName="s11_house_02_ip3.png" x="0" y="-10" visible="false"/>
+      <Image id="house03" fileName="s11_house_03_ip3.png" x="0" y="-10" visible="false"/>
+      <Image id="house04" fileName="s11_house_04_ip3.png" x="0" y="-10" visible="false"/>
+      <Image id="house05" fileName="s11_house_05_ip3.png" x="0" y="-10" visible="false"/>
+      <Image id="house06" fileName="s11_house_06_ip3.png" x="0" y="-10" visible="false"/>
+      <Image id="house07" fileName="s11_house_07_ip3.png" x="0" y="-10" visible="false"/>
+      <Image id="house08" fileName="s11_house_08_ip3.png" x="0" y="-10" visible="false"/>
+      <Image id="house09" fileName="s11_house_09_ip3.png" x="0" y="-10" visible="false"/>
+      <Image id="house10" fileName="s11_house_10_ip3.png" x="0" y="-10" visible="false"/>
+      <Image id="head" fileName="s11_pig_head_ip3.png" x="185" y="142" visible="true"/>
+      <Image id="wolf" fileName="s10_wolf_02_ip3.png" x="360" y="100" visible="true"/>
+      <Cycle id="blow" x="202" y="95" visible="false" duration="1000" count="" fileName="">
+        <Frame fileName="s11_blow_01_ip3.png"/>
+        <Frame fileName="s11_blow_02_ip3.png"/>
+      </Cycle>
+      <Image id="text" fileName="s11_text_ip3.png" x="1" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Show target="blow" step="10"/>
+      <Start target="blow" step="10"/>
+      <Hide target="house01" step="20"/>
+      <Show target="house02" step="20"/>
+      <Hide target="house02" step="22"/>
+      <Show target="house03" step="22"/>
+      <Hide target="house03" step="24"/>
+      <Show target="house04" step="24"/>
+      <Hide target="house04" step="26"/>
+      <Show target="house05" step="26"/>
+      <Hide target="house05" step="28"/>
+      <Show target="house06" step="28"/>
+      <Hide target="house06" step="30"/>
+      <Show target="house07" step="30"/>
+      <Hide target="house07" step="32"/>
+      <Show target="house08" step="32"/>
+      <Hide target="house08" step="34"/>
+      <Show target="house09" step="34"/>
+      <Hide target="house09" step="36"/>
+      <Show target="house10" step="36"/>
+      <Hide target="house10" step="38"/>
+      <Show target="pig_body" step="38"/>
+      <Show target="pig02" step="38"/>
+      <Hide target="blow" step="40"/>
+      <Stop target="blow" step="40"/>
+    </Actions>
+  </Scene>
+  <Scene id="s12" stepCount="100" stepLength="100" loopStep="">
+    <Audio fileName="z04_scene12.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s10_background_ip3.png" x="0" y="0" visible="true"/>
+      <Image id="wood" fileName="s12_wood_ip3.png" x="13" y="200" visible="true"/>
+      <Cycle id="pig01" x="480" y="140" visible="true" duration="1200" count="" fileName="">
+        <Frame fileName="s12_pig01_01_ip3.png"/>
+        <Frame fileName="s12_pig01_02_ip3.png"/>
+        <Frame fileName="s12_pig01_03_ip3.png"/>
+        <Frame fileName="s12_pig01_02_ip3.png"/>
+      </Cycle>
+      <Cycle id="pig02" x="480" y="140" visible="true" duration="1200" count="" fileName="">
+        <Frame fileName="s12_pig02_01_ip3.png"/>
+        <Frame fileName="s12_pig02_02_ip3.png"/>
+        <Frame fileName="s12_pig02_03_ip3.png"/>
+        <Frame fileName="s12_pig02_02_ip3.png"/>
+      </Cycle>
+      <Image id="text" fileName="s12_text_ip3.png" x="1" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Start target="pig02" step="1"/>
+      <Start target="pig01" step="1"/>
+      <Move target="pig01" step="10" toX="-140" toY="140" duration="4000"/>
+      <Move target="pig02" step="20" toX="-140" toY="140" duration="4000"/>
+    </Actions>
+  </Scene>
+  <Scene id="s13" stepCount="64" stepLength="100" loopStep="34">
+    <Audio fileName="z04_scene07.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s13_background_ip3.png" x="0" y="0" visible="true"/>
+      <Image id="head01" fileName="s13_pig_head_01_ip3.png" x="230" y="125" visible="true"/>
+      <Image id="head02" fileName="s13_pig_head_02_ip3.png" x="230" y="125" visible="false"/>
+      <Cycle id="wolf" x="-200" y="90" visible="true" duration="1200" count="" fileName="">
+        <Frame fileName="s06_wolf_01_ip3.png"/>
+        <Frame fileName="s06_wolf_02_ip3.png"/>
+        <Frame fileName="s06_wolf_03_ip3.png"/>
+        <Frame fileName="s06_wolf_02_ip3.png"/>
+      </Cycle>
+      <Image id="text" fileName="s13_text_ip3.png" x="1" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Move target="wolf" step="5" toX="-30" toY="100" duration="3000"/>
+      <Start target="wolf" step="5"/>
+      <Stop target="wolf" step="30"/>
+      <Hide target="head01" step="34"/>
+      <Show target="head02" step="34"/>
+      <Hide target="head02" step="36"/>
+      <Show target="head01" step="36"/>
+      <Hide target="head01" step="38"/>
+      <Show target="head02" step="38"/>
+      <Hide target="head02" step="40"/>
+      <Show target="head01" step="40"/>
+    </Actions>
+  </Scene>
+  <Scene id="s14" stepCount="35" stepLength="100" loopStep="10">
+    <Audio fileName="z04_scene14.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s13_background_ip3.png" x="0" y="0" visible="true"/>
+      <Image id="head01" fileName="s14_head_01_ip3.png" x="230" y="125" visible="true"/>
+      <Image id="head02" fileName="s14_head_02_ip3.png" x="230" y="125" visible="false"/>
+      <Image id="head03" fileName="s14_head_03_ip3.png" x="230" y="125" visible="false"/>
+      <Image id="head04" fileName="s14_head_04_ip3.png" x="230" y="125" visible="false"/>
+      <Image id="wolf" fileName="s06_wolf_01_ip3.png" x="-30" y="100" visible="true"/>
+      <Cycle id="blow" x="100" y="85" visible="false" duration="1000" count="" fileName="">
+        <Frame fileName="s14_blow_01_ip3.png"/>
+        <Frame fileName="s14_blow_02_ip3.png"/>
+      </Cycle>
+      <Image id="text" fileName="s14_text_ip3.png" x="1" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Show target="blow" step="10"/>
+      <Start target="blow" step="10"/>
+      <Hide target="head01" step="10"/>
+      <Show target="head02" step="10"/>
+      <Show target="head03" step="12"/>
+      <Hide target="head02" step="12"/>
+      <Show target="head02" step="14"/>
+      <Hide target="head03" step="14"/>
+      <Show target="head03" step="16"/>
+      <Hide target="head02" step="16"/>
+      <Show target="head02" step="18"/>
+      <Hide target="head03" step="18"/>
+      <Show target="head03" step="20"/>
+      <Hide target="head02" step="20"/>
+      <Hide target="blow" step="20"/>
+      <Hide target="head03" step="22"/>
+      <Show target="head04" step="22"/>
+      <Hide target="head04" step="35"/>
+      <Show target="head02" step="35"/>
+    </Actions>
+  </Scene>
+  <Scene id="s15" stepCount="100" stepLength="100" loopStep="">
+    <Audio fileName="z04_scene15.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s01_background_ip3.png" x="0" y="0" visible="true"/>
+      <Image id="wolf" fileName="s15_wolf_ip3.png" x="75" y="200" visible="true"/>
+      <Image id="chimney" fileName="s15_chimney_ip3.png" x="-5" y="147" visible="true"/>
+      <Image id="smoke01" fileName="s15_smoke_01_ip3.png" x="204" y="77" visible="true"/>
+      <Image id="smoke02" fileName="s15_smoke_02_ip3.png" x="172" y="-79" visible="false"/>
+      <Image id="text" fileName="s15_text_ip3.png" x="1" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Hide target="smoke01" step="5"/>
+      <Show target="smoke02" step="5"/>
+      <Hide target="smoke02" step="10"/>
+      <Show target="smoke01" step="20"/>
+      <Hide target="smoke01" step="25"/>
+      <Show target="smoke02" step="25"/>
+      <Move target="wolf" step="25" toX="75" toY="-20" duration="6000"/>
+      <Hide target="smoke02" step="30"/>
+      <Show target="smoke01" step="40"/>
+      <Show target="smoke02" step="45"/>
+      <Hide target="smoke01" step="45"/>
+      <Hide target="smoke02" step="50"/>
+      <Show target="smoke01" step="60"/>
+      <Show target="smoke02" step="65"/>
+      <Hide target="smoke01" step="65"/>
+      <Hide target="smoke02" step="70"/>
+    </Actions>
+  </Scene>
+  <Scene id="s16" stepCount="100" stepLength="100" loopStep="">
+    <Audio fileName="z04_scene16.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s16_background_ip3.png" x="0" y="0" visible="true"/>
+      <Image id="pot01" fileName="s16_cooking_pot_01_ip3.png" x="144" y="135" visible="true"/>
+      <Image id="wolf" fileName="s16_wolf_ip3.png" x="159" y="-200" visible="true"/>
+      <Image id="fireplace" fileName="s16_fireplace_ip3.png" x="-50" y="-20" visible="true"/>
+      <Image id="pot02" fileName="s16_cooking_pot_02_ip3.png" x="144" y="145" visible="true"/>
+      <Image id="splash01" fileName="s16_splash_01_ip3.png" x="315" y="45" visible="false"/>
+      <Image id="splash02" fileName="s16_splash_02_ip3.png" x="315" y="45" visible="false"/>
+      <Cycle id="fire" x="175" y="100" visible="true" duration="800" count="" fileName="">
+        <Frame fileName="s16_fire_01_ip3.png"/>
+        <Frame fileName="s16_fire_02_ip3.png"/>
+        <Frame fileName="s16_fire_03_ip3.png"/>
+        <Frame fileName="s16_fire_02_ip3.png"/>
+      </Cycle>
+      <Image id="text" fileName="s16_text_ip3.png" x="1" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Start target="fire" step="1"/>
+      <Move target="wolf" step="15" toX="159" toY="144" duration="2000"/>
+      <Hide target="wolf" step="30"/>
+      <Show target="splash01" step="29"/>
+      <Hide target="splash01" step="31"/>
+      <Show target="splash02" step="31"/>
+      <Hide target="splash02" step="33"/>
+    </Actions>
+  </Scene>
+  <Scene id="s17" stepCount="100" stepLength="100" loopStep="">
+    <Audio fileName="z04_scene17.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s17_background_ip3.png" x="0" y="0" visible="true"/>
+      <Image id="pig03" fileName="s17_pig_03_ip3.png" x="314" y="100" visible="true"/>
+      <Image id="pig02" fileName="s17_pig_02_ip3.png" x="95" y="113" visible="true"/>
+      <Image id="pig01" fileName="s17_pig_01_ip3.png" x="16" y="122" visible="true"/>
+      <Cycle id="fire" x="200" y="60" visible="true" duration="800" count="" fileName="">
+        <Frame fileName="s17_fire_01_ip3.png"/>
+        <Frame fileName="s17_fire_02_ip3.png"/>
+        <Frame fileName="s17_fire_03_ip3.png"/>
+        <Frame fileName="s17_fire_02_ip3.png"/>
+      </Cycle>
+      <Image id="text" fileName="s17_text_ip3.png" x="1" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Start target="fire" step="1"/>
+    </Actions>
+  </Scene>
+  
+<Scene id="END" stepCount="1" stepLength="100" loopStep="0">
+    <Audio fileName="end.m4a"/>
+    <Objects>
+      
+<Image id="bg" fileName="end_background_ip3.png" x="0" y="0" visible="true"/>
+
+<Cycle id="advert" x="0" y="320" visible="true" duration="800" count="">
+        <Frame fileName="end_advert_01_ip3.png"/>
+        <Frame fileName="end_advert_02_ip3.png"/>
+        <Frame fileName="end_advert_03_ip3.png"/>
+</Cycle> 	 
+
+<Button id="restart" fileName="end_restart_ip3.png" x="310" y="10" visible="true" command="RESTART"/>
+      
+<Button id="more" fileName="end_button_button.png" x="100" y="100" visible="true" command="VIEWMORE"/>
+      
+</Objects>
+<Actions>
+      <Move target="advert" step="1" toX="0" toY="0" duration="3000"/>
+      <Start target="advert" step="1"/>
+</Actions>
+</Scene>
+
+</ZuBook>

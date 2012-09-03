@@ -1,0 +1,535 @@
+<ZuBook prodId="4" 
+        name="Three Little Pigs" 
+        device="iPad" 
+        version="1.1" 
+        nextbtn="next_ipad.png" 
+        prevbtn="back_ipad.png"
+        default_background="start_background_ipad.png">
+  
+<InfoLine lineno="1" text="Application Design, Text and Illustrations:"/>   
+<InfoLine lineno="2" text="Copyright © 2011 Zubadoo Media Limited."/> 
+<InfoLine lineno="3" text="All Rights Reserved."/> 
+<InfoLine lineno="4" text=""/>          
+  
+  <Scene id="START" stepCount="0" stepLength="0" loopStep="0">
+    <Audio fileName="z04_start.m4a"/>
+    
+    <Objects>
+
+		<Image id="bg" fileName="start_background_ipad.png" x="0" y="0" visible="true"/>		
+		
+        <Button id="autoplay" fileName="start_autoplay_ipad.png" x="707" y="426" visible="true" command="AUTOPLAY"/>	
+
+		<Button id="readmyself" fileName="start_read_by_myself_ipad.png" x="607" y="555" visible="true" command="READMYSELF"/>
+       
+		<Button id="readtome" fileName="start_read_to_me_ipad.png" x="669" y="261" visible="true" command="READTOME"/>	         
+        
+        <Button id="viewmore" fileName="start_zubadoo_logo_ipad.png" x="21" y="676" visible="true" command="VIEWMORE"/>
+        		
+		<Button id="info" fileName="start_info_ipad.png" x="950" y="697" visible="true" command="INFO"/>     
+    </Objects>
+  </Scene>
+  
+  
+  
+  <Scene id="s01" stepCount="50" stepLength="100" loopStep="1">
+    <Audio fileName="z04_scene01.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s01_background_ipad.png" x="0" y="0" visible="true"/>
+      <Image id="clouds" fileName="s01_clouds_ipad.png" x="-230" y="-8" visible="true"/>
+      <Image id="clouds" fileName="s01_clouds_ipad.png" x="800" y="40" visible="true"/>
+      <Image id="grass" fileName="s01_grass_ipad.png" x="0" y="214" visible="true"/>
+      <Image id="mud" fileName="s01_mud_ipad.png" x="0" y="165" visible="true"/>
+      <Image id="pig_01" fileName="s01_pig_01_ipad.png" x="86" y="214" visible="true"/>
+      <Image id="pig_02" fileName="s01_pig_02_ipad.png" x="441" y="126" visible="true"/>
+      <Image id="pig_body" fileName="s01_pig_body_ipad.png" x="706" y="316" visible="true"/>
+      <Image id="trough" fileName="s01_trough_ipad.png" x="513" y="435" visible="true"/>
+      <Image id="head_01" fileName="s01_pig_head_01_ipad.png" x="586" y="232" visible="true"/>
+      <Image id="head_02" fileName="s01_pig_head_02_ipad.png" x="586" y="232" visible="false"/>
+      <Image id="head_03" fileName="s01_pig_head_03_ipad.png" x="586" y="232" visible="false"/>
+      <Image id="text" fileName="s01_text_ipad.png" x="0" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Hide target="head_01" step="10"/>
+      <Show target="head_02" step="10"/>
+      <Hide target="head_02" step="12"/>
+      <Show target="head_03" step="12"/>
+      <Hide target="head_03" step="30"/>
+      <Show target="head_02" step="30"/>
+      <Hide target="head_02" step="32"/>
+      <Show target="head_01" step="32"/>
+    </Actions>
+  </Scene>
+  <Scene id="s02" stepCount="100" stepLength="100" loopStep="">
+    <Audio fileName="z04_scene02.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s02_background_ipad.png" x="0" y="0" visible="true"/>
+      <Image id="mama_pig" fileName="s02_mama_pig_ipad.png" x="461" y="15" visible="true"/>
+      <Cycle id="pig01" x="1024" y="255" visible="true" duration="1000" count="" fileName="">
+        <Frame fileName="s02_pig01_01_ipad.png"/>
+        <Frame fileName="s02_pig01_02_ipad.png"/>
+        <Frame fileName="s02_pig01_03_ipad.png"/>
+        <Frame fileName="s02_pig01_02_ipad.png"/>
+      </Cycle>
+      <Cycle id="pig02" x="1024" y="255" visible="true" duration="1000" count="" fileName="">
+        <Frame fileName="s02_pig02_01_ipad.png"/>
+        <Frame fileName="s02_pig02_02_ipad.png"/>
+        <Frame fileName="s02_pig02_03_ipad.png"/>
+        <Frame fileName="s02_pig02_02_ipad.png"/>
+      </Cycle>
+      <Cycle id="pig03" x="1024" y="255" visible="true" duration="1000" count="" fileName="">
+        <Frame fileName="s02_pig03_01_ipad.png"/>
+        <Frame fileName="s02_pig03_02_ipad.png"/>
+        <Frame fileName="s02_pig03_03_ipad.png"/>
+        <Frame fileName="s02_pig03_02_ipad.png"/>
+      </Cycle>
+      <Image id="text" fileName="s02_text_ipad.png" x="0" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Start target="pig01" step="1"/>
+      <Start target="pig02" step="1"/>
+      <Start target="pig03" step="1"/>
+      <Move target="pig01" step="1" toX="-400" toY="280" duration="6200"/>
+      <Move target="pig02" step="15" toX="-400" toY="280" duration="6200"/>
+      <Move target="pig03" step="30" toX="-400" toY="280" duration="6200"/>
+    </Actions>
+  </Scene>
+  <Scene id="s03" stepCount="100" stepLength="100" loopStep="">
+    <Audio fileName="z04_scene03.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s03_background_ipad.png" x="0" y="0" visible="true"/>
+      <Cycle id="pig" x="1024" y="291" visible="true" duration="1000" count="" fileName="">
+        <Frame fileName="s03_pig_01_ipad.png"/>
+        <Frame fileName="s03_pig_02_ipad.png"/>
+        <Frame fileName="s03_pig_03_ipad.png"/>
+        <Frame fileName="s03_pig_02_ipad.png"/>
+      </Cycle>
+      <Image id="straw" fileName="s03_straw_ipad.png" x="42" y="155" visible="true"/>
+      <Image id="text" fileName="s03_text_ipad.png" x="0" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Start target="pig" step="5"/>
+      <Move target="pig" step="5" toX="740" toY="291" duration="4000"/>
+      <Stop target="pig" step="44"/>
+    </Actions>
+  </Scene>
+  <Scene id="s04" stepCount="100" stepLength="100" loopStep="">
+    <Audio fileName="z04_scene04.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s04_background_ipad.png" x="0" y="0" visible="true"/>
+      <Image id="pig" fileName="s04_pig_ipad.png" x="487" y="326" visible="true"/>
+      <Cycle id="arm" x="661" y="518" visible="true" duration="800" count="" fileName="">
+        <Frame fileName="s04_arm_01_ipad.png"/>
+        <Frame fileName="s04_arm_02_ipad.png"/>
+      </Cycle>
+      <Image id="text" fileName="s04_text_ipad.png" x="0" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Start target="arm" step="5"/>
+    </Actions>
+  </Scene>
+  <Scene id="s05" stepCount="100" stepLength="100" loopStep="">
+    <Audio fileName="z04_scene05.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s05_background_ipad.png" x="0" y="0" visible="true"/>
+      <Image id="pig" fileName="s05_pig_ipad.png" x="300" y="180" visible="true"/>
+      <Cycle id="arm" x="475" y="349" visible="true" duration="1200" count="" fileName="">
+        <Frame fileName="s05_arm_01_ipad.png"/>
+        <Frame fileName="s05_arm_02_ipad.png"/>
+        <Frame fileName="s05_arm_03_ipad.png"/>
+        <Frame fileName="s05_arm_02_ipad.png"/>
+      </Cycle>
+      <Image id="house01" fileName="s05_house_01_ipad.png" x="386" y="350" visible="true"/>
+      <Image id="house02" fileName="s05_house_02_ipad.png" x="386" y="350" visible="false"/>
+      <Image id="house03" fileName="s05_house_03_ipad.png" x="386" y="350" visible="false"/>
+      <Image id="text" fileName="s05_text_ipad.png" x="0" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Start target="arm" step="1"/>
+      <Hide target="house01" step="20"/>
+      <Show target="house02" step="20"/>
+      <Hide target="house02" step="40"/>
+      <Show target="house03" step="40"/>
+      <Stop target="arm" step="40"/>
+    </Actions>
+  </Scene>
+  <Scene id="s06" stepCount="100" stepLength="100" loopStep="">
+    <Audio fileName="z04_scene06.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s06_background_ipad.png" x="0" y="0" visible="true"/>
+      <Cycle id="wolf" x="-447" y="30" visible="true" duration="1200" count="" fileName="">
+        <Frame fileName="s06_wolf_01_ipad.png"/>
+        <Frame fileName="s06_wolf_02_ipad.png"/>
+        <Frame fileName="s06_wolf_03_ipad.png"/>
+        <Frame fileName="s06_wolf_02_ipad.png"/>
+      </Cycle>
+      <Image id="tree" fileName="s06_tree_ipad.png" x="0" y="0" visible="true"/>
+      <Image id="text" fileName="s06_text_ipad.png" x="0" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Start target="wolf" step="1"/>
+      <Move target="wolf" step="1" toX="1024" toY="250" duration="8000"/>
+    </Actions>
+  </Scene>
+  <Scene id="s07" stepCount="60" stepLength="100" loopStep="30">
+    <Audio fileName="z04_scene07.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s07_background_ipad.png" x="0" y="0" visible="true"/>
+      <Image id="head01" fileName="s07_pig_head_01_ipad.png" x="620" y="329" visible="true"/>
+      <Image id="head02" fileName="s07_pig_head_02_ipad.png" x="620" y="329" visible="false"/>
+      <Cycle id="wolf" x="-450" y="215" visible="true" duration="1200" count="" fileName="">
+        <Frame fileName="s06_wolf_01_ipad.png"/>
+        <Frame fileName="s06_wolf_02_ipad.png"/>
+        <Frame fileName="s06_wolf_03_ipad.png"/>
+        <Frame fileName="s06_wolf_02_ipad.png"/>
+      </Cycle>
+      <Image id="text" fileName="s07_text_ipad.png" x="0" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Move target="wolf" step="5" toX="15" toY="215" duration="3000"/>
+      <Start target="wolf" step="5"/>
+      <Stop target="wolf" step="38"/>
+      <Hide target="head01" step="30"/>
+      <Show target="head02" step="30"/>
+      <Hide target="head02" step="32"/>
+      <Show target="head01" step="32"/>
+      <Hide target="head01" step="34"/>
+      <Show target="head02" step="34"/>
+      <Hide target="head02" step="36"/>
+      <Show target="head01" step="36"/>
+    </Actions>
+  </Scene>
+  <Scene id="s08" stepCount="100" stepLength="100" loopStep="">
+    <Audio fileName="z04_scene08.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s08_background_ipad.png" x="0" y="0" visible="true"/>
+      <Image id="pig" fileName="s08_pig_ipad.png" x="632" y="338" visible="false"/>
+      <Image id="house01" fileName="s08_straw_house_01_ipad.png" x="497" y="0" visible="true"/>
+      <Image id="house02" fileName="s08_straw_house_02_ipad.png" x="497" y="0" visible="false"/>
+      <Image id="house03" fileName="s08_straw_house_03_ipad.png" x="497" y="0" visible="false"/>
+      <Image id="house04" fileName="s08_straw_house_04_ipad.png" x="497" y="0" visible="false"/>
+      <Image id="house05" fileName="s08_straw_house_05_ipad.png" x="497" y="0" visible="false"/>
+      <Image id="house06" fileName="s08_straw_house_06_ipad.png" x="497" y="0" visible="false"/>
+      <Image id="house07" fileName="s08_straw_house_07_ipad.png" x="497" y="0" visible="false"/>
+      <Image id="house08" fileName="s08_straw_house_08_ipad.png" x="497" y="0" visible="false"/>
+      <Image id="house09" fileName="s08_straw_house_09_ipad.png" x="497" y="0" visible="false"/>
+      <Image id="house10" fileName="s08_straw_house_10_ipad.png" x="497" y="0" visible="false"/>
+      <Image id="wolf" fileName="s08_wolf_ipad.png" x="0" y="228" visible="true"/>
+      <Cycle id="blow" x="296" y="237" visible="false" duration="1000" count="" fileName="">
+        <Frame fileName="s08_blow_01_ipad.png"/>
+        <Frame fileName="s08_blow_02_ipad.png"/>
+      </Cycle>
+      <Image id="text" fileName="s08_text_ipad.png" x="0" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Show target="blow" step="10"/>
+      <Start target="blow" step="10"/>
+      <Hide target="house01" step="20"/>
+      <Show target="house02" step="20"/>
+      <Hide target="house02" step="22"/>
+      <Show target="house03" step="22"/>
+      <Hide target="house03" step="24"/>
+      <Show target="house04" step="24"/>
+      <Hide target="house04" step="26"/>
+      <Show target="house05" step="26"/>
+      <Hide target="house05" step="28"/>
+      <Show target="house06" step="28"/>
+      <Hide target="house06" step="30"/>
+      <Show target="house07" step="30"/>
+      <Hide target="house07" step="32"/>
+      <Show target="house08" step="32"/>
+      <Hide target="house08" step="34"/>
+      <Show target="house09" step="34"/>
+      <Hide target="house09" step="36"/>
+      <Show target="house10" step="36"/>
+      <Hide target="house10" step="38"/>
+      <Show target="pig" step="38"/>
+      <Stop target="blow" step="40"/>
+      <Hide target="blow" step="40"/>
+    </Actions>
+  </Scene>
+  <Scene id="s09" stepCount="100" stepLength="100" loopStep="">
+    <Audio fileName="z04_scene09.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s09_background_ipad.png" x="0" y="0" visible="true"/>
+      <Cycle id="pig" x="-255" y="327" visible="true" duration="1200" count="" fileName="">
+        <Frame fileName="s09_pig_01_ipad.png"/>
+        <Frame fileName="s09_pig_02_ipad.png"/>
+        <Frame fileName="s09_pig_03_ipad.png"/>
+        <Frame fileName="s09_pig_02_ipad.png"/>
+      </Cycle>
+      <Image id="tree02" fileName="s09_tree_02_ipad.png" x="829" y="0" visible="true"/>
+      <Image id="text" fileName="s09_text_ipad.png" x="0" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Start target="pig" step="1"/>
+      <Move target="pig" step="10" toX="1024" toY="275" duration="4000"/>
+    </Actions>
+  </Scene>
+  <Scene id="s10" stepCount="50" stepLength="100" loopStep="30">
+    <Audio fileName="z04_scene07.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s10_background_ipad.png" x="0" y="0" visible="true"/>
+      <Image id="house" fileName="s10_house_ipad.png" x="45" y="110" visible="true"/>
+      <Image id="head01" fileName="s10_pig_head_01_ipad.png" x="377" y="330" visible="true"/>
+      <Image id="head02" fileName="s10_pig_head_02_ipad.png" x="377" y="330" visible="false"/>
+      <Image id="wolf" fileName="s10_wolf_ipad.png" x="637" y="193" visible="true"/>
+      <Image id="smoke01" fileName="s10_smoke_01_ipad.png" x="86" y="80" visible="false"/>
+      <Image id="smoke02" fileName="s10_smoke_02_ipad.png" x="75" y="0" visible="false"/>
+      <Image id="text" fileName="s10_text_ipad.png" x="0" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Show target="smoke01" step="5"/>
+      <Hide target="smoke01" step="10"/>
+      <Show target="smoke02" step="10"/>
+      <Hide target="smoke02" step="15"/>
+      <Hide target="head01" step="30"/>
+      <Show target="head02" step="30"/>
+      <Show target="head01" step="32"/>
+      <Hide target="head02" step="32"/>
+      <Show target="head02" step="34"/>
+      <Hide target="head01" step="34"/>
+      <Show target="smoke01" step="35"/>
+      <Show target="head01" step="36"/>
+      <Hide target="head02" step="36"/>
+      <Hide target="smoke01" step="40"/>
+      <Show target="smoke02" step="40"/>
+      <Hide target="smoke02" step="45"/>
+    </Actions>
+  </Scene>
+  <Scene id="s11" stepCount="100" stepLength="100" loopStep="">
+    <Audio fileName="z04_scene08.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s10_background_ipad.png" x="0" y="0" visible="true"/>
+      <Image id="pig02" fileName="s11_pig_02_ipad.png" x="131" y="310" visible="true"/>
+      <Image id="pig_body" fileName="s11_pig_body_ipad.png" x="286" y="408" visible="false"/>
+      <Image id="house01" fileName="s11_house_01_ipad.png" x="0" y="-1" visible="true"/>
+      <Image id="house02" fileName="s11_house_02_ipad.png" x="0" y="-1" visible="false"/>
+      <Image id="house03" fileName="s11_house_03_ipad.png" x="0" y="-1" visible="false"/>
+      <Image id="house04" fileName="s11_house_04_ipad.png" x="0" y="-1" visible="false"/>
+      <Image id="house05" fileName="s11_house_05_ipad.png" x="0" y="-1" visible="false"/>
+      <Image id="house06" fileName="s11_house_06_ipad.png" x="0" y="-1" visible="false"/>
+      <Image id="house07" fileName="s11_house_07_ipad.png" x="0" y="-1" visible="false"/>
+      <Image id="house08" fileName="s11_house_08_ipad.png" x="0" y="-1" visible="false"/>
+      <Image id="house09" fileName="s11_house_09_ipad.png" x="0" y="-1" visible="false"/>
+      <Image id="house10" fileName="s11_house_10_ipad.png" x="0" y="-1" visible="false"/>
+      <Image id="head" fileName="s11_pig_head_ipad.png" x="390" y="337" visible="true"/>
+      <Image id="wolf" fileName="s11_wolf_ipad.png" x="796" y="266" visible="true"/>
+      <Cycle id="blow" x="435" y="221" visible="false" duration="1000" count="" fileName="">
+        <Frame fileName="s11_blow_01_ipad.png"/>
+        <Frame fileName="s11_blow_02_ipad.png"/>
+      </Cycle>
+      <Image id="text" fileName="s11_text_ipad.png" x="0" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Show target="blow" step="10"/>
+      <Start target="blow" step="10"/>
+      <Hide target="house01" step="20"/>
+      <Show target="house02" step="20"/>
+      <Hide target="house02" step="22"/>
+      <Show target="house03" step="22"/>
+      <Hide target="house03" step="24"/>
+      <Show target="house04" step="24"/>
+      <Hide target="house04" step="26"/>
+      <Show target="house05" step="26"/>
+      <Hide target="house05" step="28"/>
+      <Show target="house06" step="28"/>
+      <Hide target="house06" step="30"/>
+      <Show target="house07" step="30"/>
+      <Hide target="house07" step="32"/>
+      <Show target="house08" step="32"/>
+      <Hide target="house08" step="34"/>
+      <Show target="house09" step="34"/>
+      <Hide target="house09" step="36"/>
+      <Show target="house10" step="36"/>
+      <Hide target="house10" step="38"/>
+      <Show target="pig_body" step="38"/>
+      <Stop target="blow" step="40"/>
+      <Hide target="blow" step="40"/>
+    </Actions>
+  </Scene>
+  <Scene id="s12" stepCount="100" stepLength="100" loopStep="">
+    <Audio fileName="z04_scene12.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s10_background_ipad.png" x="0" y="0" visible="true"/>
+      <Image id="wood" fileName="s12_wood_ipad.png" x="51" y="458" visible="true"/>
+      <Cycle id="pig01" x="1024" y="350" visible="true" duration="1200" count="" fileName="">
+        <Frame fileName="s12_pig01_01_ipad.png"/>
+        <Frame fileName="s12_pig01_02_ipad.png"/>
+        <Frame fileName="s12_pig01_03_ipad.png"/>
+        <Frame fileName="s12_pig01_02_ipad.png"/>
+      </Cycle>
+      <Cycle id="pig02" x="1024" y="375" visible="true" duration="1200" count="" fileName="">
+        <Frame fileName="s12_pig02_01_ipad.png"/>
+        <Frame fileName="s12_pig02_02_ipad.png"/>
+        <Frame fileName="s12_pig02_03_ipad.png"/>
+        <Frame fileName="s12_pig02_02_ipad.png"/>
+      </Cycle>
+      <Image id="text" fileName="s12_text_ipad.png" x="0" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Start target="pig02" step=""/>
+      <Start target="pig01" step="1"/>
+      <Move target="pig01" step="10" toX="-239" toY="365" duration="4000"/>
+      <Move target="pig02" step="20" toX="-269" toY="405" duration="4000"/>
+    </Actions>
+  </Scene>
+  <Scene id="s13" stepCount="64" stepLength="100" loopStep="34">
+    <Audio fileName="z04_scene07.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s13_background_ipad.png" x="0" y="0" visible="true"/>
+      <Image id="head01" fileName="s13_pig_head_01_ipad.png" x="480" y="325" visible="true"/>
+      <Image id="head02" fileName="s13_pig_head_02_ipad.png" x="480" y="325" visible="false"/>
+      <Cycle id="wolf" x="-450" y="195" visible="true" duration="1200" count="" fileName="">
+        <Frame fileName="s06_wolf_01_ipad.png"/>
+        <Frame fileName="s06_wolf_02_ipad.png"/>
+        <Frame fileName="s06_wolf_03_ipad.png"/>
+        <Frame fileName="s06_wolf_02_ipad.png"/>
+      </Cycle>
+      <Image id="text" fileName="s13_text_ipad.png" x="0" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Start target="wolf" step="1"/>
+      <Move target="wolf" step="1" toX="-70" toY="195" duration="3800"/>
+      <Stop target="wolf" step="40"/>
+      <Hide target="head01" step="34"/>
+      <Show target="head02" step="34"/>
+      <Hide target="head02" step="36"/>
+      <Show target="head01" step="36"/>
+      <Hide target="head01" step="38"/>
+      <Show target="head02" step="38"/>
+      <Hide target="head02" step="40"/>
+      <Show target="head01" step="40"/>
+    </Actions>
+  </Scene>
+  <Scene id="s14" stepCount="35" stepLength="100" loopStep="10">
+    <Audio fileName="z04_scene14.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s13_background_ipad.png" x="0" y="0" visible="true"/>
+      <Image id="head01" fileName="s14_head_01_ipad.png" x="470" y="309" visible="true"/>
+      <Image id="head02" fileName="s14_head_02_ipad.png" x="470" y="309" visible="false"/>
+      <Image id="head03" fileName="s14_head_03_ipad.png" x="470" y="309" visible="false"/>
+      <Image id="head04" fileName="s14_head_04_ipad.png" x="470" y="309" visible="false"/>
+      <Image id="wolf" fileName="s14_wolf_ipad.png" x="0" y="208" visible="true"/>
+      <Cycle id="blow" x="173" y="227" visible="false" duration="1000" count="" fileName="">
+        <Frame fileName="s14_blow_01_ipad.png"/>
+        <Frame fileName="s14_blow_02_ipad.png"/>
+      </Cycle>
+      <Image id="text" fileName="s14_text_ipad.png" x="0" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Hide target="head01" step="10"/>
+      <Start target="blow" step="10"/>
+      <Show target="blow" step="10"/>
+      <Show target="head02" step="10"/>
+      <Show target="head03" step="12"/>
+      <Hide target="head02" step="12"/>
+      <Show target="head02" step="14"/>
+      <Hide target="head03" step="14"/>
+      <Show target="head03" step="16"/>
+      <Hide target="head02" step="16"/>
+      <Show target="head02" step="18"/>
+      <Hide target="head03" step="18"/>
+      <Show target="head03" step="20"/>
+      <Hide target="head02" step="20"/>
+      <Hide target="blow" step="20"/>
+      <Hide target="head03" step="22"/>
+      <Show target="head04" step="22"/>
+      <Hide target="head04" step="35"/>
+      <Show target="head02" step="35"/>
+    </Actions>
+  </Scene>
+  <Scene id="s15" stepCount="100" stepLength="100" loopStep="">
+    <Audio fileName="z04_scene15.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s01_background_ipad.png" x="0" y="0" visible="true"/>
+      <Image id="wolf" fileName="s15_wolf_ipad.png" x="192" y="324" visible="true"/>
+      <Image id="chimney" fileName="s15_chimney_ipad.png" x="0" y="301" visible="true"/>
+      <Image id="smoke01" fileName="s15_smoke_01_ipad.png" x="442" y="153" visible="true"/>
+      <Image id="smoke02" fileName="s15_smoke_02_ipad.png" x="385" y="-152" visible="false"/>
+      <Image id="text" fileName="s15_text_ipad.png" x="0" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Hide target="smoke01" step="5"/>
+      <Show target="smoke02" step="5"/>
+      <Hide target="smoke02" step="10"/>
+      <Show target="smoke01" step="20"/>
+      <Hide target="smoke01" step="25"/>
+      <Show target="smoke02" step="25"/>
+      <Hide target="smoke02" step="30"/>
+      <Move target="wolf" step="35" toX="192" toY="-43" duration="6000"/>
+      <Show target="smoke01" step="40"/>
+      <Hide target="smoke01" step="45"/>
+      <Show target="smoke02" step="45"/>
+      <Hide target="smoke02" step="50"/>
+      <Show target="smoke01" step="60"/>
+      <Hide target="smoke01" step="65"/>
+      <Show target="smoke02" step="65"/>
+      <Hide target="smoke02" step="70"/>
+    </Actions>
+  </Scene>
+  <Scene id="s16" stepCount="100" stepLength="100" loopStep="">
+    <Audio fileName="z04_scene16.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s16_background_ipad.png" x="0" y="0" visible="true"/>
+      <Image id="pot01" fileName="s16_cooking_pot_01_ipad.png" x="326" y="306" visible="true"/>
+      <Image id="wolf" fileName="s16_wolf_ipad.png" x="335" y="-343" visible="true"/>
+      <Image id="fireplace" fileName="s16_fireplace_ipad.png" x="0" y="0" visible="true"/>
+      <Image id="pot02" fileName="s16_cooking_pot_02_ipad.png" x="326" y="322" visible="true"/>
+      <Image id="splash01" fileName="s16_splash_01_ipad.png" x="656" y="178" visible="false"/>
+      <Image id="splash02" fileName="s16_splash_02_ipad.png" x="656" y="178" visible="false"/>
+      <Cycle id="fire" x="348" y="247" visible="true" duration="800" count="" fileName="">
+        <Frame fileName="s16_fire_01_ipad.png"/>
+        <Frame fileName="s16_fire_02_ipad.png"/>
+        <Frame fileName="s16_fire_03_ipad.png"/>
+        <Frame fileName="s16_fire_02_ipad.png"/>
+      </Cycle>
+      <Image id="text" fileName="s16_text_ipad.png" x="0" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Start target="fire" step="1"/>
+      <Move target="wolf" step="15" toX="335" toY="144" duration="2000"/>
+      <Show target="splash01" step="35"/>
+      <Show target="splash02" step="37"/>
+      <Hide target="splash01" step="37"/>
+      <Hide target="wolf" step="35"/>
+      <Hide target="splash02" step="39"/>
+    </Actions>
+  </Scene>
+  <Scene id="s17" stepCount="100" stepLength="100" loopStep="">
+    <Audio fileName="z04_scene17.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="s17_background_ipad.png" x="0" y="0" visible="true"/>
+      <Image id="pig03" fileName="s17_pig_03_ipad.png" x="652" y="284" visible="true"/>
+      <Image id="pig02" fileName="s17_pig_02_ipad.png" x="181" y="284" visible="true"/>
+      <Image id="pig01" fileName="s17_pig_01_ipad.png" x="38" y="332" visible="true"/>
+      <Cycle id="fire" x="423" y="182" visible="true" duration="800" count="" fileName="">
+        <Frame fileName="s17_fire_01_ipad.png"/>
+        <Frame fileName="s17_fire_02_ipad.png"/>
+        <Frame fileName="s17_fire_03_ipad.png"/>
+        <Frame fileName="s17_fire_02_ipad.png"/>
+      </Cycle>
+      <Image id="text" fileName="s17_text_ipad.png" x="0" y="0" visible="true"/>
+    </Objects>
+    <Actions>
+      <Start target="fire" step="1"/>
+    </Actions>
+  </Scene>
+  <Scene id="END" stepCount="1" stepLength="100" loopStep="0">
+    <Audio fileName="end.m4a"/>
+    <Objects>
+      <Image id="bg" fileName="end_background_ipad.png" x="0" y="0" visible="true"/>
+      <Cycle id="advert" x="0" y="768" visible="true" duration="800" count="">
+        <Frame fileName="end_advert_01_ipad.png"/>
+        <Frame fileName="end_advert_02_ipad.png"/>
+        <Frame fileName="end_advert_03_ipad.png"/>
+      </Cycle>
+      <Button id="restart" fileName="end_restart_ipad.png" x="700" y="30" visible="true" command="RESTART"/>
+      <Button id="more" fileName="end_button_button.png" x="260" y="200" visible="true" command="VIEWMORE"/>
+    </Objects>
+    <Actions>
+      <Move target="advert" step="1" toX="0" toY="142" duration="2000"/>
+      <Start target="advert" step="1"/>
+    </Actions>
+  </Scene>
+</ZuBook>
